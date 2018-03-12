@@ -17,6 +17,7 @@
   "author": "Nathan Reyes <nathanreyes@me.com>",
   "main": "lib/v-calendar.min.js",
   "files": [
+    "build",
     "src",
     "lib"
   ],
