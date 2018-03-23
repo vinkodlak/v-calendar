@@ -119,11 +119,11 @@ export default {
   data() {
     return {
       exDatePickerCode: ExDatePickerCode,
-      mode: 'single',
+      mode: 'range',
       selectedValue: null,
       showCaps: true,
-      showPopover: true,
-      showDisabledDates: false,
+      showPopover: false,
+      showDisabledDates: true,
       isInline: false,
       isExpanded: false,
       popoverExpanded: true,
@@ -132,7 +132,7 @@ export default {
       popoverDirection: 'bottom',
       popoverDirections: ['bottom', 'top', 'left', 'right'],
       popoverAlignment: 'left',
-      tintColor: '#66b3cc',
+      tintColor: '#0075c3',
     };
   },
   computed: {

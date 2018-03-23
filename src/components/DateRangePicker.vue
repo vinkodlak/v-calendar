@@ -81,7 +81,9 @@ export default {
     });
   },
   methods: {
-    clickDay({ dateTime }) {
+    clickDay({ dateTime, weekday, date }) {
+      // vv make sure it is on selectabl day only
+      if (weekday !== 7 || date < new Date()) return;
       // Start new drag selection if not dragging
       if (!this.dragValue) {
         // Update drag value if it is valid
@@ -90,6 +92,8 @@ export default {
           this.dragValue = newDragValue;
         }
       } else {
+        // vv remove same day click
+        if (this.dragValue.start.getTime() === dateTime) return;
         // Update selected value if it is valid
         const newValue = rangeNormalizer({
           start: new Date(this.dragValue.start.getTime()),

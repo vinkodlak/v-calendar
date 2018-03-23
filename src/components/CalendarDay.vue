@@ -408,6 +408,8 @@ export default {
           borderWidth: bar.borderWidth,
           borderStyle: bar.borderStyle,
           opacity: bar.opacity,
+          position: bar.position,
+          top: bar.top,
         },
       };
     },

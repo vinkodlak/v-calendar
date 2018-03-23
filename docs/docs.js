@@ -13,7 +13,31 @@ Vue.use(VueClipboard);
 Vue.use(Buefy, {
   defaultIconPack: 'fa',
 });
-Vue.use(VCalendar);
+Vue.use(VCalendar, {
+  firstDayOfWeek: 2,
+  datePickerDisabledAttribute: {
+    key: 'disabled',
+    order: 100,
+    contentStyle: {
+      color: '#d98c8c',
+      fontWeight: 600,
+      opacity: 0.6,
+      borderRadius: '0'
+    },
+    contentHoverStyle: {
+      cursor: 'not-allowed',
+      backgroundColor: 'transparent'
+    },
+    bar: {
+      height: '1px',
+      backgroundColor: '#d98c8c',
+      borderWidth: 0,
+      opacity: 0.6,
+      position: 'relative',
+      top: '-14px'
+    }
+  }
+});
 Vue.component('CodeBlock', CodeBlock);
 Vue.directive('highlight', {
   deep: true,
